@@ -45,7 +45,7 @@
 
 ## 📸 완성 화면
 
-> <img src="https://raw.githubusercontent.com/hubintheroot/10k-rule/refs/heads/main/src/img/screenshot.png"  width="350" height="350"/> ![Mobile](https://raw.githubusercontent.com/hubintheroot/10k-rule/refs/heads/main/src/img/screenshot-m.png)
+> <img src="https://raw.githubusercontent.com/hubintheroot/10k-rule/refs/heads/main/src/img/screenshot.png"  width="573"/> ![Mobile](https://raw.githubusercontent.com/hubintheroot/10k-rule/refs/heads/main/src/img/screenshot-m.png)
 
 ## 💁‍♂️ 개발자
 
