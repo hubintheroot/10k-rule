@@ -309,6 +309,13 @@ footer {
   text-wrap: nowrap;
 }
 
+.copyright-text small {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  display: block;
+}
+
 /* 오버레이 */
 .overlay {
   border: none;
@@ -513,7 +520,6 @@ footer {
     font-size: 12px;
     text-align: center;
   }
-
   /* overlay */
   .overlay {
     width: 800px;
