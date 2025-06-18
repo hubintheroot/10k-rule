@@ -125,8 +125,9 @@ img {
   margin-bottom: 13px;
 }
 
-.desc-box p strong {
+.desc-box p dfn {
   font-weight: 500;
+  font-style: normal;
   font-family: "GmarketSansBold";
 }
 
@@ -180,6 +181,10 @@ img {
   font-size: inherit;
   line-height: 100%;
   text-align: center;
+  font-family: inherit;
+}
+
+[class^="input-"]:not(.input-form)::placeholder {
   color: #babcbe;
 }
 
@@ -394,7 +399,7 @@ footer {
     font-size: 18px;
   }
 
-  .desc-box p strong {
+  .desc-box p dfn {
     font-size: 24px;
   }
 
@@ -429,6 +434,7 @@ footer {
     width: 228px;
     height: 56px;
     padding: 16px 40px;
+    margin: 0 20px;
   }
 
   [class^="input-"]:not(.input-form):focus {
