@@ -135,7 +135,7 @@ img {
   position: absolute;
   display: block;
   content: "";
-  background-image: url("./src/svg/icon-“.svg");
+  background-image: url("../svg/icon-“.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
@@ -208,7 +208,7 @@ img {
   content: "";
   display: block;
   position: absolute;
-  background-image: url("./src/img/click.png");
+  background-image: url("../img/click.png");
   background-repeat: no-repeat;
   background-size: cover;
   width: 43px;
