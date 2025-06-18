@@ -135,7 +135,7 @@ img {
   position: absolute;
   display: block;
   content: "";
-  background-image: url("/src/svg/“.svg");
+  background-image: url("/src/svg/icon-“.svg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 20px;
