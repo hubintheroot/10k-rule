@@ -1,4 +1,547 @@
+@font-face {
+  font-family: "OTEnjoystoriesBA";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff2")
+      format("woff2"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.woff")
+      format("woff"),
+    url("https://fonts.gstatic.com/ea/notosanskr/v2/NotoSansKR-Regular.otf")
+      format("opentype");
+}
+
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+}
+button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+main {
+  background-color: #5b2386;
+  font-family: "GmarketSansMedium";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  line-height: 100%;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.main-title-box {
+  margin-top: 40px;
+}
+
+.title-img-box {
+  width: 278px;
+}
+
+.title-img-box img {
+  aspect-ratio: 278 / 130;
+}
+
+.sub-title-box {
+  margin-top: 32px;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.quote-text {
+  font-family: "OTEnjoystoriesBA";
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 100%;
+  width: 297px;
+  color: #f5df4d;
+}
+
+.desc-box {
+  width: 330px;
+  padding: 0 calc((100% - 290px) / 2);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.desc-box p:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.desc-box p strong {
+  font-weight: 500;
+  font-family: "GmarketSansBold";
+}
+
+.desc-box::before,
+.desc-box::after {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url("/src/svg/“.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 18px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.desc-box::before {
+  left: 0;
+}
+.desc-box::after {
+  right: 0;
+  transform: translate(0, -50%) rotate(180deg);
+}
+
+.input-form {
+  margin-top: 60px;
+}
+
+.input-form p {
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 100%;
+}
+.input-form p:nth-last-of-type(1) {
+  margin-bottom: 0;
+}
+.input-form p:nth-last-of-type(1) span {
+  display: block;
+  margin-bottom: 12px;
+}
+
+[class^="input-"]:not(.input-form) {
+  width: 156px;
+  height: 38px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  margin: 0 8px;
+  font-size: inherit;
+  line-height: 100%;
+  text-align: center;
+  color: #babcbe;
+}
+
+[class^="input-"]:not(.input-form):focus {
+  outline: none;
+}
+
+.btn-calc {
+  margin: 80px auto 0;
+  background-color: #fcee21;
+  color: #5b2386;
+  position: relative;
+  left: 35px;
+  width: 240px;
+  padding: 20px 38px;
+  border-radius: 12px;
+  text-align: center;
+  word-break: keep-all;
+  font-family: "GmarketSansBold";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.btn-calc::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-image: url("/src/img/click.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 43px;
+  height: 48px;
+  aspect-ratio: 43 / 48;
+  top: 40px;
+  right: -42px;
+}
+
+.btn-calc span {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+.btn-calc span:last-child {
+  margin-bottom: 0;
+}
+
+.form-result-box {
+  margin-top: 68px;
+  width: 286px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-result-box p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+}
+.form-result-box p strong {
+  font-family: "GmarketSansBold";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.btn-container {
+  margin-top: 52px;
+  display: flex;
+  gap: 8px;
+  width: 313px;
+}
+.btn-container button {
+  font-family: "GmarketSansBold";
+  font-weight: 500;
+  font-size: 14px;
+  color: #5b2386;
+  padding: 16px 24px;
+  border-radius: 12px;
+}
+
+.btn-open-modal {
+  background-color: #fcee21;
+}
+.btn-share {
+  background-color: #fff;
+}
+
+/* footer */
+footer {
+  padding: 60px 0 48px;
+  background-color: #5b2386;
+  display: flex;
+  justify-content: center;
+}
+.footer-content-container {
+  width: 261px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.footer-logo-box {
+  width: 125px;
+  height: 28px;
+}
+.footer-copyright-box {
+  font-family: "Noto Sans KR";
+}
+
+.copyright-text {
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 100%;
+  color: #fff;
+  text-align: center;
+  text-wrap: nowrap;
+}
+
+/* 오버레이 */
+.overlay {
+  border: none;
+  border-radius: 20px;
+  width: 330px;
+  min-height: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 42px;
+  box-shadow: 4px 4px 30px 0px #00000026;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.overlay-text-box {
+  font-family: "OTEnjoystoriesBA";
+  color: #5b2386;
+  font-weight: 700;
+}
+.overlay-title {
+  font-size: 64px;
+}
+.overlay-sub {
+  font-size: 36px;
+}
+.overlay-img-box {
+  width: 240px;
+  height: 188px;
+  aspect-ratio: 240 / 188;
+}
+
+.btn-overlay-close {
+  background-color: #fcee21;
+  padding: 20px 44.5px;
+  color: #5b2386;
+  font-family: "GmarketSansBold";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  border-radius: 12px;
+}
+.btn-overlay-close span {
+  display: inline-block;
+  width: 151px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+}
+
+.close {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .main-title-box {
+    margin-top: 120px;
+  }
+
+  .title-img-box {
+    width: 564px;
+  }
+
+  .title-img-box img {
+    aspect-ratio: 564 / 265;
+  }
+
+  .sub-title-box {
+    margin-top: 52px;
+    gap: 80px;
+  }
+
+  .quote-text {
+    font-size: 36px;
+    width: 486px;
+  }
+
+  .desc-box {
+    width: 485px;
+    padding: 0 calc((100% - 373px) / 2);
+    font-size: 18px;
+  }
+
+  .desc-box p strong {
+    font-size: 24px;
+  }
+
+  .desc-box::before,
+  .desc-box::after {
+    width: 36px;
+    height: 32px;
+  }
+
+  .desc-box::before {
+    left: 0;
+  }
+  .desc-box::after {
+    right: 0;
+    transform: translate(0, -50%) rotate(180deg);
+  }
+
+  .input-form {
+    margin-top: 100px;
+  }
+
+  .input-form p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .input-form p:nth-last-of-type(1) span {
+    display: inline;
+    margin-bottom: 0;
+  }
+
+  [class^="input-"]:not(.input-form) {
+    width: 228px;
+    height: 56px;
+    padding: 16px 40px;
+  }
+
+  [class^="input-"]:not(.input-form):focus {
+    outline: none;
+  }
+
+  .btn-calc {
+    margin-top: 120px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: auto;
+    padding: 20px 50px;
+    border-radius: 12px;
+    text-align: center;
+    word-break: keep-all;
+    font-size: 16px;
+  }
+
+  .btn-calc span {
+    margin-bottom: 0;
+    position: relative;
+    bottom: -4px;
+  }
+
+  .btn-calc::after {
+    aspect-ratio: 64 / 72;
+    top: 14px;
+    /* 자신 크기 - 버튼과의 거리 */
+    right: -71px;
+    width: 64px;
+    height: 72px;
+  }
+
+  .form-result-box {
+    margin-top: 142px;
+    width: 663px;
+    gap: 16px;
+  }
+
+  .form-result-box p {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .form-result-box p strong {
+    font-weight: 700;
+    font-size: 72px;
+  }
+
+  .btn-container {
+    margin-top: 120px;
+    gap: 12px;
+    width: auto;
+  }
+  .btn-container button {
+    font-size: 24px;
+    padding: 20px 50px;
+  }
+
+  /* footer */
+  footer {
+    padding: 120px 0 106px;
+    display: flex;
+    justify-content: center;
+  }
+  .footer-content-container {
+    width: 365px;
+    gap: 20px;
+  }
+  .footer-logo-box {
+    width: 168px;
+    height: 36px;
+  }
+
+  .copyright-text {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* overlay */
+  .overlay {
+    width: 800px;
+    min-height: 816px;
+    padding: 80px;
+    gap: 40px;
+  }
+
+  .overlay-title {
+    font-size: 96px;
+  }
+
+  .overlay-title::after {
+    display: inline;
+    content: "♥♥♥";
+  }
+
+  .overlay-img-box {
+    width: 438px;
+    height: 342px;
+    aspect-ratio: 438 / 342;
+  }
+
+  .btn-overlay-close {
+    margin-top: 40px;
+    padding: 20px 50px 20px 48px;
+    flex-direction: row;
+    gap: 8px;
+  }
+  .btn-overlay-close span {
+    font-size: 24px;
+    width: auto;
+    /* 영역을 벗어나길래 바텀으로 4px 낮춤 */
+    position: relative;
+    bottom: -4px;
+  }
 }
