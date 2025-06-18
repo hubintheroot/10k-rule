@@ -418,7 +418,7 @@ footer {
 
   .input-form p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 24px;
   }
   .input-form p:nth-last-of-type(1) span {
     display: inline;
@@ -445,7 +445,7 @@ footer {
     border-radius: 12px;
     text-align: center;
     word-break: keep-all;
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .btn-calc span {
