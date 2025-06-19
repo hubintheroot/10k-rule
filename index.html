@@ -11,18 +11,20 @@
   </head>
   <body>
     <!-- overlay -->
-    <dialog class="overlay close">
-      <div class="overlay-text-box">
-        <h2 class="overlay-title">화이팅!!</h2>
-        <p class="overlay-sub">당신의 꿈을 응원합니다!</p>
+    <dialog class="overlay">
+      <div class="overlay-container">
+        <div class="overlay-text-box">
+          <h2 class="overlay-title">화이팅!!</h2>
+          <p class="overlay-sub">당신의 꿈을 응원합니다!</p>
+        </div>
+        <div class="overlay-img-box">
+          <img src="./src/img/licat.png" alt="라이캣" />
+        </div>
+        <button class="btn-overlay-close">
+          <span>종료하고 진짜</span>
+          <span>훈련하러 가기 GO!GO!</span>
+        </button>
       </div>
-      <div class="overlay-img-box">
-        <img src="./src/img/licat.png" alt="라이캣" />
-      </div>
-      <button class="btn-overlay-close">
-        <span>종료하고 진짜</span>
-        <span>훈련하러 가기 GO!GO!</span>
-      </button>
     </dialog>
     <!-- main -->
     <main>
@@ -99,5 +101,15 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const modal = document.querySelector("dialog");
+      document
+        .querySelector(".btn-open-modal")
+        .addEventListener("click", () => modal.showModal());
+      document
+        .querySelector(".btn-overlay-close")
+        .addEventListener("click", () => modal.close());
+    </script>
   </body>
 </html>
