@@ -50,14 +50,18 @@
       <!-- form -->
       <form action="#" class="input-form">
         <p>
-          나는<input
+          나는
+          <label for="input-what" class="sr-only">어떤 분야</label>
+          <input
             type="text"
+            id="input-what"
             class="input-what"
             placeholder="예)프로그래밍"
           />전문가가 될 것이다.
         </p>
         <p>
           <span>그래서 앞으로 매일 하루에</span>
+          <label for="input-what" class="sr-only">몇 시간</label>
           <input type="text" class="input-hour" placeholder="예)5시간" />시간씩
           훈련할 것이다.
         </p>
@@ -103,13 +107,13 @@
     </footer>
 
     <script>
-      const modal = document.querySelector("dialog");
+      const modal = document.querySelector('dialog');
       document
-        .querySelector(".btn-open-modal")
-        .addEventListener("click", () => modal.showModal());
+        .querySelector('.btn-open-modal')
+        .addEventListener('click', () => modal.showModal());
       document
-        .querySelector(".btn-overlay-close")
-        .addEventListener("click", () => modal.close());
+        .querySelector('.btn-overlay-close')
+        .addEventListener('click', () => modal.close());
     </script>
   </body>
 </html>
